@@ -1,0 +1,15 @@
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\bin\Debug\netcoreapp2.1\appsettings.json
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\bin\Debug\netcoreapp2.1\QnAPrompting.deps.json
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\bin\Debug\netcoreapp2.1\QnAPrompting.runtimeconfig.json
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\bin\Debug\netcoreapp2.1\QnAPrompting.runtimeconfig.dev.json
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\bin\Debug\netcoreapp2.1\QnAPrompting.dll
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\bin\Debug\netcoreapp2.1\QnAPrompting.pdb
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\obj\Debug\netcoreapp2.1\QnAPrompting.csprojAssemblyReference.cache
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\obj\Debug\netcoreapp2.1\QnAPrompting.RazorAssemblyInfo.cache
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\obj\Debug\netcoreapp2.1\QnAPrompting.RazorAssemblyInfo.cs
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\obj\Debug\netcoreapp2.1\QnAPrompting.AssemblyInfoInputs.cache
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\obj\Debug\netcoreapp2.1\QnAPrompting.AssemblyInfo.cs
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\obj\Debug\netcoreapp2.1\QnAPrompting.RazorTargetAssemblyInfo.cache
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\obj\Debug\netcoreapp2.1\QnAPrompting.dll
+C:\chatbot\BotBuilder-Samples\experimental\qnamaker-prompting\csharp_dotnetcore\obj\Debug\netcoreapp2.1\QnAPrompting.pdb
