@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 using System.Collections.Generic;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
@@ -9,6 +10,7 @@ using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
 using Microsoft.BotBuilderSamples;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using QnAPrompting.Dialogs;
 using QnAPrompting.Helpers;
 
@@ -26,16 +28,47 @@ namespace QnAPrompting.Bots
         {
         }
 
+
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Send a welcome message to the user and tell them what actions they may perform to use this bot
+            await SendWelcomeMessageAsync(membersAdded, turnContext, cancellationToken);
+        }
+
+        private async Task SendWelcomeMessageAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             foreach (var member in membersAdded)
             {
                 // Greet anyone that was not the target (recipient) of this message.
                 if (member.Id != turnContext.Activity.Recipient.Id)
                 {
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Welcome to QnA Bot"), cancellationToken);
+                    await SendSuggestedActionsAsync(turnContext, cancellationToken);
                 }
             }
+        }
+
+        private async Task SendSuggestedActionsAsync(ITurnContext turnContext, CancellationToken cancellationToken)
+        {
+                                    
+            var welcomeCard = CreateAdaptiveCardAttachment();
+            var reply = MessageFactory.Attachment(welcomeCard);
+
+            await turnContext.SendActivityAsync(reply, cancellationToken);
+        }
+
+        // Load attachment from embedded resource.
+        public static Attachment CreateAdaptiveCardAttachment()
+        {
+            // combine path for cross platform support
+            string[] paths = { ".", "Cards", "welcomeCard.json" };
+            var adaptiveCardJson = File.ReadAllText(Path.Combine(paths));
+
+            var adaptiveCardAttachment = new Attachment()
+            {
+                ContentType = "application/vnd.microsoft.card.adaptive",
+                Content = JsonConvert.DeserializeObject(adaptiveCardJson),
+            };
+            return adaptiveCardAttachment;
         }
     }
 }

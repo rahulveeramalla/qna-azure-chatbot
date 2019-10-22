@@ -1,0 +1,51 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "TextBlock",
+            "spacing": "medium",
+            "size": "default",
+            "weight": "bolder",
+            "text": "Welcome to Elephant Insurance!",
+            "wrap": true,
+            "maxLines": 0
+        },
+        {
+            "type": "TextBlock",
+            "size": "default",
+            "isSubtle": "yes",
+            "text": "Hello, I am a virtual agent for Elephant. How can I help you?",
+            "wrap": true,
+            "maxLines": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Account Help",
+            "data": "account"
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Customer Service",
+            "data": "customer service"
+        },
+        {
+            "type": "Action.OpenUrl",
+            "title": "Insurance",
+            "url": "https://www.elephant.com/insurance"
+        },
+        {
+            "type": "Action.OpenUrl",
+            "title": "Claims",
+            "url": "https://www.elephant.com/claims"
+        },
+        {
+            "type": "Action.OpenUrl",
+            "title": "FAQs",
+            "url": "https://www.elephant.com/car-insurance/faqs"
+        }
+    ]
+}
